@@ -8,8 +8,8 @@
 //#define VK_USE_PLATFORM_X11_KHR
 #define GLFW_INCLUDE_VULKAN
 #include <GLFW/glfw3.h>
-#define GLFW_EXPOSE_NATIVE_X11
-#include <GLFW/glfw3native.h>
+// #define GLFW_EXPOSE_NATIVE_X11
+// #include <GLFW/glfw3native.h>
 
 #define WIDTH 800
 #define HEIGHT 600
@@ -173,12 +173,13 @@ void initVulkan() {
 
     vkGetDeviceQueue(Dev, GraphicsIdx, 0, &GraphicsQueue); // Retriving the queue to accualy do something with it.
 
-    VkDisplaySurfaceCreateInfoKHR SurfCreateInfo = {
-        .sType = VK_STRUCTURE_TYPE_DISPLAY_SURFACE_CREATE_INFO_KHR,
-    };
+    // VkDisplaySurfaceCreateInfoKHR SurfCreateInfo = {
+    //     .sType = VK_STRUCTURE_TYPE_DISPLAY_SURFACE_CREATE_INFO_KHR,
+    // };
 }
 
 void deinitVulkan() {
+    printf("B\n");
     vkDestroyDevice(Dev, NULL);
     vkDestroyInstance(Instance, NULL);
 

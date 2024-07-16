@@ -1,6 +1,5 @@
 CC := gcc
-CFLAGS := -std=c99 -O0 -ggdb
-
+CFLAGS := -std=c99 -O0 -g
 LDFLAGS := -lglfw -lvulkan -ldl -lpthread -lX11 -lXxf86vm -lXrandr -lXi
 
 SRC := main.c
